@@ -36,4 +36,3 @@ npm run dev --workspace frontend
 
 Open `http://localhost:5173/enter`.
 
-See [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) for architecture, endpoints, folder structure, and study order.
