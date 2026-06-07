@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+ai_service/.venv/
+ai_service/venv/
+.venv/
+venv/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Frontend build/cache
+dist/
+frontend/dist/
+.vite/
+.vite-temp/
+frontend/node_modules/.vite/
+frontend/node_modules/.vite-temp/
+npm-debug.log*
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Rails runtime cache/logs
+backend/tmp/*
+!backend/tmp/.keep
+!backend/tmp/storage/
+!backend/tmp/storage/.keep
+backend/log/*
+!backend/log/.keep
+
+# Rails secret keys and storage
+backend/config/master.key
+backend/storage/*
+!backend/storage/.keep
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

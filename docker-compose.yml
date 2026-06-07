@@ -1,0 +1,28 @@
+services:
+  backend_postgres:
+    image: postgres:16-alpine
+    container_name: askdocs_backend_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: askdocs_backend_development
+    ports:
+      - "5434:5432"
+    volumes:
+      - askdocs_backend_pgdata:/var/lib/postgresql/data
+
+  ai_postgres:
+    image: pgvector/pgvector:pg16
+    container_name: askdocs_ai_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: askdocs_ai_development
+    ports:
+      - "5435:5432"
+    volumes:
+      - askdocs_ai_pgdata:/var/lib/postgresql/data
+
+volumes:
+  askdocs_backend_pgdata:
+  askdocs_ai_pgdata:
